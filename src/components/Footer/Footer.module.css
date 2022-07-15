@@ -7,10 +7,14 @@ footer {
 }
 
 footer h6 {
-    line-height: 50px;
+    line-height: 52px;
     color: #fff;
     font-weight: 300;
     margin: 0;
+}
+
+footer h6 svg {
+    font-size: 15px !important;
 }
 
 .company_name {

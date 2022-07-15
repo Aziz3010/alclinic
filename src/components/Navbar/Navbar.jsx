@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import st from './Navbar.module.css';
 import alclinic from '../../assets/imgs/logo.ico';
 import userImg from '../../assets/imgs/doctor.png';
+import MenuIcon from '@mui/icons-material/Menu';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 
 const Navbar = ({showSideNav , setShowSideNav}) => {
   return (
@@ -28,7 +30,7 @@ const Navbar = ({showSideNav , setShowSideNav}) => {
 
           <div className='col-3'>
             <div className={st.menu}>
-              <i onClick={()=>setShowSideNav(!showSideNav)} className={showSideNav === true ? 'ri-menu-unfold-line' : 'ri-menu-fold-line'}></i>
+              {showSideNav === true ? <MenuIcon onClick={()=>setShowSideNav(!showSideNav)} /> : <MenuOpenIcon onClick={()=>setShowSideNav(!showSideNav)} />}
             </div>
           </div>
 

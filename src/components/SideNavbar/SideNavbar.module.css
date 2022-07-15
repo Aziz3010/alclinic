@@ -11,14 +11,14 @@
     display: none;
 }
 
-.close_sideNav i {
+.close_sideNav svg {
     cursor: pointer;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #212245;
     transition: color .3s;
 }
 
-.close_sideNav i:hover {
+.close_sideNav svg:hover {
     color: #e9c46a;
 }
 
@@ -37,8 +37,9 @@
 
 .sideNavbar_ul {
     padding: 0;
+    margin-bottom: 5px;
     overflow-y: scroll;
-    height: calc(100vh - 233px);
+    height: calc(100vh - 230px);
 }
 
 .sideNavbar_ul::-webkit-scrollbar {
@@ -59,7 +60,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    column-gap: 10px;
+    column-gap: 5px;
     padding: .5rem 1.2rem .5rem 0;
     transition: color .3s, padding .3s;
 }
@@ -67,4 +68,8 @@
 .sideNavbar_ul li a:hover {
     padding: .5rem 1.5rem .5rem 0;
     color: #e9c46a;
+}
+
+.sideNavbar_ul li a svg {
+    font-size: 20px;
 }
