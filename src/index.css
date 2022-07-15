@@ -48,11 +48,12 @@ main {
   background-color: #f4a261;
 }
 
+
 @media only screen and (max-width: 666px) {
-  .Layout_left_side__ATSkd {
+  .left_side_media {
       margin-right: 0;
   }
-  .SideNavbar_close_sideNav__WMbRh {
+  .close_sideNav_media {
     display: flex;
   }
 }

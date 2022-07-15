@@ -14,7 +14,7 @@ const Layout = () => {
         <SideNavbar showSideNav={showSideNav} setShowSideNav={setShowSideNav} />
       </section>
 
-      <div className={ showSideNav === true ? st.left_side : st.left_side_no_m}>
+      <div className={ showSideNav === true ? `${st.left_side} left_side_media` : `${st.left_side_no_m} left_side_media`}>
         <Navbar showSideNav={showSideNav} setShowSideNav={setShowSideNav} />
         <main>
           <div className="container">

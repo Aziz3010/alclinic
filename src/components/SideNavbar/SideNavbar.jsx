@@ -6,7 +6,7 @@ import alclinic from '../../assets/imgs/logo.ico';
 const SideNavbar = ({showSideNav, setShowSideNav}) => {
   return (
     <>
-      <div onClick={()=> setShowSideNav(!showSideNav)} className={st.close_sideNav}><i className="ri-close-line"></i></div>
+      <div onClick={()=> setShowSideNav(!showSideNav)} className={`${st.close_sideNav} close_sideNav_media`}><i className="ri-close-line"></i></div>
 
       <div className={st.sideNavbar_logo}>
         <img src={alclinic} alt="alclinic" />
