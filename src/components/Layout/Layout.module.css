@@ -8,10 +8,6 @@
     transition: margin-right 1s;
 }
 
-main {
-    padding: 1.2rem 0;
-}
-
 .layout_sideNavbar {
     position: fixed;
     width: 240px;

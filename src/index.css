@@ -28,19 +28,37 @@ a {
   text-decoration: none;
 }
 
+main {
+  padding: 1.2rem 0;
+  height: calc(100vh - 102px);
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  background-color: #264653;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f4a3617e;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #f4a261;
+}
+
 @media only screen and (max-width: 666px) {
-  header .row .col-6 {
-      display: none;
+  .Layout_left_side__ATSkd {
+      margin-right: 0;
+  }
+  .SideNavbar_close_sideNav__WMbRh {
+    display: flex;
   }
 }
 
-@media only screen and (max-width: 400px) {
-  header .row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  header .row .col-3 {
-    width: 100%;
+@media only screen and (max-width: 330px) {
+  header .col-3:first-child {
+    display: none;
   }
 }

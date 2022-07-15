@@ -11,8 +11,9 @@ const Layout = () => {
   return (
     <>
       <section className={showSideNav === true ? st.layout_sideNavbar : st.layout_sideNavbar_hide}>
-        <SideNavbar />
+        <SideNavbar showSideNav={showSideNav} setShowSideNav={setShowSideNav} />
       </section>
+
       <div className={ showSideNav === true ? st.left_side : st.left_side_no_m}>
         <Navbar showSideNav={showSideNav} setShowSideNav={setShowSideNav} />
         <main>
@@ -22,6 +23,7 @@ const Layout = () => {
         </main>
         <Footer />
       </div>
+
     </>
   )
 }

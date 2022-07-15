@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 import st from './SideNavbar.module.css';
 import alclinic from '../../assets/imgs/logo.ico';
 
-const SideNavbar = () => {
+const SideNavbar = ({showSideNav, setShowSideNav}) => {
   return (
     <>
+      <div onClick={()=> setShowSideNav(!showSideNav)} className={st.close_sideNav}><i className="ri-close-line"></i></div>
+
       <div className={st.sideNavbar_logo}>
         <img src={alclinic} alt="alclinic" />
       </div>
       <ul className={st.sideNavbar_ul}>
+        <li><Link to='/login'><i className="ri-door-open-line"></i>تسجيل الدخول</Link></li>
         <li><Link to='/home'><i className="ri-home-4-line"></i>الصفحة الرئيسية</Link></li>
         <li><Link to='/bookings'><i className="ri-calendar-2-line"></i>الحجوزات</Link></li>
         <li><Link to='/patients'><i className="ri-hotel-bed-line"></i>المرضي</Link></li>
