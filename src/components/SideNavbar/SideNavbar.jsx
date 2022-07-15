@@ -32,14 +32,17 @@ const SideNavbar = ({ showSideNav, setShowSideNav }) => {
         <li><Link to='/financial'><AttachMoneyIcon />الحسابات</Link></li>
         <li><Link to='/store'><StorageIcon />المخزن</Link></li>
         <li><Link to='/logout'><LockIcon />تسجيل الخروج</Link></li>
+        <li className='my-3'>
+          <div className="input-group-sm">
+            <select className="form-select" id="inputGroupSelect01">
+              <option value="ar">العربية</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+        </li>
       </ul>
 
-      <div className="input-group-sm">
-        <select className="form-select" id="inputGroupSelect01">
-          <option value="ar">العربية</option>
-          <option value="en">English</option>
-        </select>
-      </div>
+
     </>
   )
 }
