@@ -37,6 +37,12 @@
 
 .sideNavbar_ul {
     padding: 0;
+    overflow-y: scroll;
+    height: calc(100vh - 233px);
+}
+
+.sideNavbar_ul::-webkit-scrollbar {
+    width: 0px;
 }
 
 .sideNavbar_ul li {

@@ -11,6 +11,7 @@ const SideNavbar = ({showSideNav, setShowSideNav}) => {
       <div className={st.sideNavbar_logo}>
         <img src={alclinic} alt="alclinic" />
       </div>
+      
       <ul className={st.sideNavbar_ul}>
         <li><Link to='/login'><i className="ri-door-open-line"></i>تسجيل الدخول</Link></li>
         <li><Link to='/home'><i className="ri-home-4-line"></i>الصفحة الرئيسية</Link></li>
@@ -18,6 +19,13 @@ const SideNavbar = ({showSideNav, setShowSideNav}) => {
         <li><Link to='/patients'><i className="ri-hotel-bed-line"></i>المرضي</Link></li>
         <li><Link to='/doctors'><i className="ri-nurse-line"></i>الأطباء</Link></li>
         <li><Link to='/receptionists'><i className="ri-door-open-line"></i>موظفي الإستقبال</Link></li>
+        <li><Link to='/financial'><i className="ri-money-dollar-box-line"></i>الحسابات</Link></li>
+        <li><Link to='/store'><i className="ri-store-line"></i>المخزن</Link></li>
+        <li><Link to='/logout'><i className="ri-logout-box-r-line"></i>تسجيل الخروج</Link></li>
+        a
+        <li><Link to='/financial'><i className="ri-money-dollar-box-line"></i>الحسابات</Link></li>
+        <li><Link to='/store'><i className="ri-store-line"></i>المخزن</Link></li>
+        <li><Link to='/logout'><i className="ri-logout-box-r-line"></i>تسجيل الخروج</Link></li>
         <li><Link to='/financial'><i className="ri-money-dollar-box-line"></i>الحسابات</Link></li>
         <li><Link to='/store'><i className="ri-store-line"></i>المخزن</Link></li>
         <li><Link to='/logout'><i className="ri-logout-box-r-line"></i>تسجيل الخروج</Link></li>
