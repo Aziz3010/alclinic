@@ -1,9 +1,12 @@
 import React from 'react';
+import Helmet from '../../components/Helmet/Helmet';
 // import st from './Patients.module.css';
 
 const Patients = () => {
   return (
-    <div>Patients</div>
+    <Helmet title='المرضي'>
+
+    </Helmet>
   )
 }
 
