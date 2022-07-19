@@ -58,6 +58,9 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.input-group-text {
+  text-align: right !important;
+}
 
 @media only screen and (max-width: 666px) {
   .left_side_media {

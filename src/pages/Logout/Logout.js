@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Logout = () => {
+  useEffect(()=>{
+    localStorage.removeItem("userTokenLocalStorage");
+    window.location.replace('/login');
+  })
+
   return (
-    <div>Logout</div>
+    <div>جاري تسجيل الخروج</div>
   )
 }
 

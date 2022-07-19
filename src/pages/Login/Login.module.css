@@ -1,0 +1,21 @@
+.title_form {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form {
+    width: 600px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 610px) {
+    .form {
+        width: 300px;
+    }
+}

@@ -73,3 +73,48 @@
 .sideNavbar_ul li a svg {
     font-size: 20px;
 }
+
+.sideNavbar_ul .drop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.sideNavbar_ul .drop a {
+    width: 100%;
+}
+
+.sideNavbar_ul .drop :nth-child(2) {
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    transform: rotate(0deg);
+    transition: color .3s, transform .3s;
+}
+
+.sideNavbar_ul .drop :nth-child(2):hover {
+    color: #e9c46a;
+}
+
+.drop_down {
+    padding: 0;
+    display: none;
+}
+
+.sideNavbar_ul .drop_down li {
+    border-bottom: 1px solid transparent;
+}
+
+.sideNavbar_ul .drop_down li:last-child {
+    border-bottom: 1px solid #fefefe;
+}
+
+.sideNavbar_ul .drop_down li a {
+    padding: .3rem 2.3rem .3rem 0;
+}
+
+.sideNavbar_ul .drop_down li a:hover {
+    padding: .3rem 2.8rem .3rem 0;
+}
+
