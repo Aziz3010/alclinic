@@ -1,4 +1,4 @@
-.title_form {
+.title_form_login {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -6,7 +6,7 @@
     flex-direction: column;
 }
 
-.form {
+.form_login {
     width: 600px;
     padding: 10px;
     display: flex;
@@ -15,7 +15,7 @@
 }
 
 @media screen and (max-width: 610px) {
-    .form {
+    .form_login {
         width: 300px;
     }
 }

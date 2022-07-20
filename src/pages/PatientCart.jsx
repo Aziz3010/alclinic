@@ -1,5 +1,5 @@
 import React from 'react';
-// import st from './PatientCart.module.css';
+import '../styles/patientCart.css';
 
 const PatientCart = () => {
   return (

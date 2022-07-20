@@ -1,6 +1,6 @@
 import React from 'react';
-import Helmet from '../../components/Helmet/Helmet';
-// import st from './NotFound.module.css';
+import Helmet from '../components/Helmet';
+import '../styles/notFound.css';
 
 const NotFound = () => {
   return (

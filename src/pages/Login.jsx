@@ -1,6 +1,6 @@
 import React from 'react';
-import Helmet from '../../components/Helmet/Helmet';
-import st from './Login.module.css';
+import Helmet from '../components/Helmet';
+import '../styles/login.css';
 import { Link } from 'react-router-dom';
 
 const Login = ({setRegisterComponent}) => {
@@ -14,12 +14,12 @@ const Login = ({setRegisterComponent}) => {
 
   return (
     <Helmet title='تسجيل الدخول'>
-      <div className={`${st.container} container`}>
+      <div className='container'>
         <div className="row">
           <div className="col-12">
-            <div className={st.title_form}>
+            <div className='title_form_login'>
               <h2 className='text-center mb-4'>تسجيل الدخول</h2>
-              <form onSubmit={handleSubmit} className={st.form}>
+              <form onSubmit={handleSubmit} className='form_login'>
                 <input type="email" className="form-control mb-3" placeholder='البريد الإلكتروني' />
                 <input type="password" className="form-control mb-3" placeholder='كلمة المرور' />
                 <div className="input-group mb-4">
@@ -30,7 +30,7 @@ const Login = ({setRegisterComponent}) => {
                 </div>
                 <button type='submit' className='btn btn-primary'>تسجيل الدخول</button>
                 <p className='m-0 mt-4'>لا يوجد لديك حساب؟
-                  <Link onClick={()=>setRegisterComponent(true)} className={st.link} to="/register"> إشترك الأن</Link>
+                  <Link onClick={()=>setRegisterComponent(true)} to="/register"> إشترك الأن</Link>
                 </p>
               </form>
             </div>

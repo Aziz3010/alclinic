@@ -1,6 +1,6 @@
 import React from 'react';
-import Helmet from '../../components/Helmet/Helmet';
-// import st from './Financial.module.css';
+import Helmet from '../components/Helmet';
+import '../styles/financial.css';
 
 const Financial = () => {
   return (
@@ -10,4 +10,4 @@ const Financial = () => {
   )
 }
 
-export default Financial
+export default Financial;

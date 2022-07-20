@@ -1,6 +1,6 @@
 import React from 'react';
-import Helmet from '../../components/Helmet/Helmet';
-// import st from './Home.module.css';
+import Helmet from '../components/Helmet';
+import '../styles/home.css';
 
 const Home = () => {
   return (

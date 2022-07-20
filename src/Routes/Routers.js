@@ -1,19 +1,19 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Bookings from '../pages/Bookings/Bookings';
-import Doctor from '../pages/Doctor/Doctor';
-import Doctors from '../pages/Doctors/Doctors';
-import Financial from '../pages/Financial/Financial';
-import Home from '../pages/Home/Home';
-import Logout from '../pages/Logout/Logout';
-import NotFound from '../pages/NotFound/NotFound';
-import PatientCart from '../pages/Patient/PatientCart';
-import Patients from '../pages/Patients/Patients';
-import Receptionist from '../pages/Receptionist/Receptionist';
-import Receptionists from '../pages/Receptionists/Receptionists';
-// import Login from '../pages/Login/Login';
-// import Register from '../pages/Register/Register';
-import Store from '../pages/Store/Store';
+import Bookings from '../pages/Bookings';
+import Doctor from '../pages/Doctor';
+import Doctors from '../pages/Doctors';
+import Financial from '../pages/Financial';
+import Home from '../pages/Home';
+import Logout from '../pages/Logout';
+import NotFound from '../pages/NotFound';
+import PatientCart from '../pages/PatientCart';
+import Patients from '../pages/Patients';
+import Receptionist from '../pages/Receptionist';
+import Receptionists from '../pages/Receptionists';
+// import Login from '../pages/Login';
+// import Register from '../pages/Register';
+import Store from '../pages/Store';
 
 const Routers = () => {
   return <Routes>

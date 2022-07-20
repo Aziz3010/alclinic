@@ -1,6 +1,6 @@
 import React from 'react'
-import Helmet from '../../components/Helmet/Helmet';
-// import st from './Bookings.module.css';
+import Helmet from '../components/Helmet';
+import '../styles/bookings.css';
 
 const Bookings = () => {
   return (

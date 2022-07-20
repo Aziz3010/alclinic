@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Helmet from '../../components/Helmet/Helmet';
-import st from './Receptionists.module.css';
+import Helmet from '../components/Helmet';
+import '../styles/receptionists.css';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import BeenhereIcon from '@mui/icons-material/Beenhere';
@@ -42,19 +42,19 @@ const Receptionists = () => {
 
           <div className="col-md-4 p-1 text-center">
             <div>
-              <h5 onClick={getoptionsValue} className={st.item}>جديد</h5>
+              <h5 onClick={getoptionsValue} className='receptionists_item'>جديد</h5>
             </div>
           </div>
 
           <div className="col-md-4 p-1 text-center">
             <div>
-              <h5 onClick={getoptionsValue} className={st.item}>مُسجل</h5>
+              <h5 onClick={getoptionsValue} className='receptionists_item'>مُسجل</h5>
             </div>
           </div>
 
           <div className="col-md-4 p-1 text-center">
             <div>
-              <h5 onClick={getoptionsValue} className={st.item}>قائمة الإنتظار</h5>
+              <h5 onClick={getoptionsValue} className='receptionists_item'>قائمة الإنتظار</h5>
             </div>
           </div>
 
@@ -62,7 +62,7 @@ const Receptionists = () => {
 
         { newPatient && <div className="row">
             <div className="col-12">
-              <div className="form">
+              <div className="receptionists_form">
                 <h3 className='mb-3'>تسجيل مريض جديد</h3>
                 <form onSubmit={submitHandler}>
                   <input type="text" className="form-control mb-3" placeholder='الاسم الأول' />
@@ -78,7 +78,7 @@ const Receptionists = () => {
 
         { oldPatient && <div className="row">
             <div className="col-12">
-              <div className="patients_table">
+              <div className="receptionists_patients_table">
                 <h3 className='mb-3'>سجل المرضي</h3>
                 <input type="text" className='form-control mt-4 mb-3 w-50' placeholder='البحث بالجوال' />
                 <div className="table-responsive">
@@ -130,7 +130,7 @@ const Receptionists = () => {
 
         {currentPatient && <div className="row">
           <div className="col-12">
-            <div className="patients_table">
+            <div className="receptionists_patients_table">
               <h3 className='mb-3'>قائمة الانتظار</h3>
               <input type="text" className='form-control mt-4 mb-3 w-50' placeholder='البحث بالجوال' />
               <div className="table-responsive">

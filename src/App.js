@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from "react";
-import Layout from "./components/Layout/Layout";
-import Login from "./pages/Login/Login";
-import Register from "./pages/Register/Register";
+import Layout from "./components/Layout";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 const App = () => {
   const pathNameURL = window.location.pathname;
-  const tokenLocalStorage = JSON.parse(
-    localStorage.getItem("userTokenLocalStorage")
-  );
+  const tokenLocalStorage = JSON.parse(localStorage.getItem("userTokenLocalStorage"));
   const [loginComponent, setLoginComponent] = useState(false);
   const [registerComponent, setRegisterComponent] = useState(false);
   const [layoutComponent, setLayoutComponent] = useState(false);
-  console.log(pathNameURL);
+  // console.log(pathNameURL);
 
   useEffect(() => {
     if (pathNameURL === "/login") {

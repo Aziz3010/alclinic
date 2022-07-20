@@ -1,5 +1,5 @@
 import React from 'react';
-// import st from './Receptionist.module.css';
+import '../styles/receptionist.css';
 
 const Receptionist = () => {
   return (
