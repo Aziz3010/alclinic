@@ -14,6 +14,7 @@ import Receptionists from '../pages/Receptionists';
 // import Login from '../pages/Login';
 // import Register from '../pages/Register';
 import Store from '../pages/Store';
+import Subscribe from '../pages/Subscribe';
 
 const Routers = () => {
   return <Routes>
@@ -21,6 +22,7 @@ const Routers = () => {
     {/* <Route path='/register' element={ <Register /> } /> */}
     <Route exact path='/' element={ <Navigate to='/home' /> } />
     <Route path='/home' element={ <Home /> } />
+    <Route path='/subscribe:qouta' element={ <Subscribe /> } />
     <Route path='/doctors' element={ <Doctors /> } />
     <Route path='/doctors:id' element={ <Doctor /> } />
     <Route path='/receptionists' element={ <Receptionists /> } />

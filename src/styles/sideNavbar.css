@@ -144,6 +144,18 @@
 .sideNavbar_ul .drop_down li {
     border-bottom: .5px solid #fefefe80;
     margin: 0 2.5rem 0 0;
+    position: relative;
+}
+
+.sideNavbar_ul .drop_down li::after {
+    content: '';
+    position: absolute;
+    right: -12px;
+    bottom: 5px;
+    width: 15px;
+    height: 0.5px;
+    background-color: #fefefe80;
+    transform: rotate(-45deg);
 }
 
 .sideNavbar_ul .drop_down li a {
@@ -160,3 +172,10 @@
 }
 
 /* #################################### */
+
+
+@media only screen and (max-width: 666px) {
+    .close_sideNav_media {
+      display: flex;
+    }
+}

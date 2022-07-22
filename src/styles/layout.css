@@ -31,3 +31,9 @@
     background-color: #264653;
     transition: right 1s;
 }
+
+@media only screen and (max-width: 666px) {
+    .left_side_media {
+        margin-right: 0;
+    }
+}

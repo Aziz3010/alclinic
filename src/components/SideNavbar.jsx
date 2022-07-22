@@ -57,14 +57,12 @@ const SideNavbar = ({ showSideNav, setShowSideNav }) => {
       </div>
 
       <ul className='sideNavbar_ul'>
-
         <li>
           <Link to='/home'>
             <HomeOutlinedIcon />
             <p>الصفحة الرئيسية</p>
           </Link>
         </li>
-
 
         <li className='drop'>
           <BoyIcon />
@@ -74,11 +72,9 @@ const SideNavbar = ({ showSideNav, setShowSideNav }) => {
           </div>
         </li>
         <ul className='drop_down'>
-          <li><Link to='/doctors'>طبيب1</Link></li>
-          <li><Link to='/doctors'>طبيب2</Link></li>
-          <li><Link to='/doctors'>طبيب3</Link></li>
+          <li><Link to='/doctors'>الروشتة</Link></li>
+          <li><Link to='/doctors'>الأطباء</Link></li>
         </ul>
-
 
         <li className='drop'>
           <GirlIcon />
@@ -88,9 +84,8 @@ const SideNavbar = ({ showSideNav, setShowSideNav }) => {
           </div>
         </li>
         <ul className='drop_down'>
-          <li><Link to='/receptionists'>موظف1</Link></li>
-          <li><Link to='/receptionists'>موظف2</Link></li>
-          <li><Link to='/receptionists'>موظف3</Link></li>
+          <li><Link to='/receptionists'>الإستقبال</Link></li>
+          <li><Link to='/receptionists'>الموظفين</Link></li>
         </ul>
 
         <li className='drop'>
@@ -103,7 +98,7 @@ const SideNavbar = ({ showSideNav, setShowSideNav }) => {
         <ul className='drop_down'>
           <li><Link to='/bookings'>الحجوزات الحالية</Link></li>
           <li><Link to='/bookings'>الحجوزات السابقة</Link></li>
-          <li><Link to='/bookings'>الحجوزات القادمة</Link></li>
+          <li><Link to='/bookings'>الحجوزات المحتملة</Link></li>
         </ul>
 
         <li className='drop'>
@@ -116,22 +111,33 @@ const SideNavbar = ({ showSideNav, setShowSideNav }) => {
         <ul className='drop_down'>
           <li><Link to='/patients'>المرضي الحالين</Link></li>
           <li><Link to='/patients'>المرضي السابقين</Link></li>
-          <li><Link to='/patients'>المرضي القادمين</Link></li>
+          <li><Link to='/patients'>المرضي المحتملين</Link></li>
         </ul>
 
-        <li>
-          <Link to='/store'>
-            <StorageIcon />
+        <li className='drop'>
+          <StorageIcon />
+          <div onClick={(e) => handleDropDown(e)} className='drop_text_arrow'>
             <p>المخزن</p>
-          </Link>
+            <ChevronLeftIcon />
+          </div>
         </li>
+        <ul className='drop_down'>
+          <li><Link to='/store'>أدوات طبية</Link></li>
+          <li><Link to='/store'>أخري</Link></li>
+        </ul>
 
-        {/* <li>
-          <Link to='/financial'>
-            <AttachMoneyIcon />
-            <p>الحسابات</p>
-          </Link>
-        </li> */}
+        <li className='drop'>
+          <AttachMoneyIcon />
+          <div onClick={(e) => handleDropDown(e)} className='drop_text_arrow'>
+            <p>المالية</p>
+            <ChevronLeftIcon />
+          </div>
+        </li>
+        <ul className='drop_down'>
+          <li><Link to='/financial'>الإيرادات</Link></li>
+          <li><Link to='/financial'>المصروفات</Link></li>
+          <li><Link to='/financial'>التقارير المالية</Link></li>
+        </ul>
 
         <li>
           <Link to='/logout'>
@@ -141,8 +147,6 @@ const SideNavbar = ({ showSideNav, setShowSideNav }) => {
         </li>
 
       </ul>
-
-
     </>
   )
 }

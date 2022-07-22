@@ -28,6 +28,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 main {
   padding: 1.2rem 0;
   height: calc(100vh - 102px);
@@ -60,15 +64,6 @@ input[type=number] {
 
 .input-group-text {
   text-align: right !important;
-}
-
-@media only screen and (max-width: 666px) {
-  .left_side_media {
-      margin-right: 0;
-  }
-  .close_sideNav_media {
-    display: flex;
-  }
 }
 
 @media only screen and (max-width: 330px) {
