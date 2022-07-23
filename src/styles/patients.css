@@ -1,0 +1,37 @@
+.patients_patients_search-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.patients_patients_search-total input {
+    width: 50%;
+}
+
+.patients_patients_search-total span {
+    background-color: #2a9d8f;
+    padding: 6px 10px;
+    margin: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 400px) {
+    .patients_patients_search-total {
+        flex-direction: column;
+    }
+
+    .patients_patients_search-total input {
+        width: 100%;
+        order: 2;
+    }
+
+    .patients_patients_search-total span {
+        width: 100%;
+        text-align: center;
+        order: 1;
+        margin-bottom: 10px;
+    }
+}

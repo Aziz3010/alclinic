@@ -11,28 +11,33 @@ import PatientCart from '../pages/PatientCart';
 import Patients from '../pages/Patients';
 import Receptionist from '../pages/Receptionist';
 import Receptionists from '../pages/Receptionists';
-// import Login from '../pages/Login';
-// import Register from '../pages/Register';
 import Store from '../pages/Store';
 import Subscribe from '../pages/Subscribe';
 
 const Routers = () => {
   return <Routes>
-    {/* <Route path='/login' element={ <Login /> } /> */}
-    {/* <Route path='/register' element={ <Register /> } /> */}
     <Route exact path='/' element={ <Navigate to='/home' /> } />
     <Route path='/home' element={ <Home /> } />
-    <Route path='/subscribe:qouta' element={ <Subscribe /> } />
+    <Route path='/subscribe/:qouta' element={ <Subscribe /> } />
+    
     <Route path='/doctors' element={ <Doctors /> } />
-    <Route path='/doctors:id' element={ <Doctor /> } />
+    <Route path='/doctors/view/:id' element={ <Doctor /> } />
+    <Route path='/doctors/edit/:id' element={ <Doctor /> } />
+
     <Route path='/receptionists' element={ <Receptionists /> } />
-    <Route path='/receptionists:id' element={ <Receptionist /> } />
+    <Route path='/receptionists/:id' element={ <Receptionist /> } />
+
     <Route path='/patients' element={ <Patients /> } />
-    <Route path='/patients:id' element={ <PatientCart /> } />
-    <Route path='/bookings' element={ <Bookings /> } />
+    <Route path='/patients/:id' element={ <PatientCart /> } />
+    
+    <Route path='/bookings/:type' element={ <Bookings /> } />
+    
     <Route path='/financial' element={ <Financial /> } />
+    
     <Route path='/store' element={ <Store /> } />
+    
     <Route path='/logout' element={ <Logout /> } />
+    
     <Route path='*' element={ <NotFound /> } />
   </Routes>
 }

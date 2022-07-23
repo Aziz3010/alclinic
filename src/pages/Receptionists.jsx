@@ -31,7 +31,6 @@ const Receptionists = () => {
       setOldPatient(false);
       setCurrentPatient(true);
     }
-
   };
 
   return (

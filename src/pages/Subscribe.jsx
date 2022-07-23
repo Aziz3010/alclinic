@@ -3,8 +3,7 @@ import { useParams } from 'react-router-dom';
 
 const Subscribe = () => {
     const params = useParams();
-    const qoutaLength = params.qouta.length;
-    const qouta = params.qouta.slice(1,qoutaLength);
+    const qouta = params.qouta;
 
     return (
         <div>Subscribe In {qouta} Qouta</div>

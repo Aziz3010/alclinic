@@ -27,9 +27,6 @@ const App = () => {
         window.location.replace('/login');
       }
     }
-    
-
-
   }, [setLoginComponent, setRegisterComponent, pathNameURL, tokenLocalStorage]);
 
   return (

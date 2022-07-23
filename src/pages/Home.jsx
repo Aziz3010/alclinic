@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Helmet from '../components/Helmet';
 import '../styles/home.css';
+import CloseIcon from '@mui/icons-material/Close';
+import CheckIcon from '@mui/icons-material/Check';
 
 const Home = () => {
   return (
@@ -54,11 +56,11 @@ const Home = () => {
             <div className="left_side_home">
               
               <div className="ads_head">
-                <h5>إعلانات مدفوعة</h5>
+                <h5>إعلانات</h5>
               </div>
               
               <div className="ads_content">
-                <h6>إعلانات مدفوعة</h6>
+                <h6>إعلانات</h6>
               </div>
 
             </div>
@@ -66,7 +68,8 @@ const Home = () => {
           </div>
         </div>
 
-        <h4 className='prices_title'>أسعار الباقات</h4>
+        <h4 className='prices_title'>الباقات</h4>
+
         <div className="row">
           <div className="col-md-4 col-sm-6">
             <div className="qouta_item basic">
@@ -75,19 +78,21 @@ const Home = () => {
               <p>قم بالإشتراك بالباقة الأساسية و أحصل علي</p>
 
               <ul>
-                <li><h6>شاشة تحكم</h6></li>
-                <li><h6><span>1</span> شاشة للطبيب</h6></li>
-                <li><h6><span>1</span> شاشة للإستقبال</h6></li>
-                <li><h6>شاشة للحجوزات</h6></li>
-                <li><h6>شاشة للمرضي</h6></li>
-                <li><h6>شاشة للمالية</h6></li>
-                <li><h6>شاشة للمخازن</h6></li>
+                <li className='yes'><CheckIcon /><h6>شاشة تحكم</h6></li>
+                <li className='yes'><CheckIcon /><h6><span>1</span> شاشة طبيب</h6></li>
+                <li className='no'><CloseIcon /><h6><span>0</span> شاشة أدمن</h6></li>
+                <li className='yes'><CheckIcon /><h6><span>1</span> شاشة إستقبال</h6></li>
+                <li className='yes'><CheckIcon /><h6>شاشة للحجوزات</h6></li>
+                <li className='no'><CloseIcon /><h6>شاشة للمرضي</h6></li>
+                <li className='no'><CloseIcon /><h6>شاشة للمالية</h6></li>
+                <li className='no'><CloseIcon /><h6>شاشة للمخازن</h6></li>
               </ul>
 
-              <Link to='/subscribe:basic' className='subscribe_btn'>إشتراك</Link>
+              <Link to='/subscribe/basic' className='subscribe_btn'>إشتراك</Link>
 
             </div>
           </div>
+
           <div className="col-md-4 col-sm-6">
             <div className="qouta_item vip">
               <h5>المميزة</h5>
@@ -95,19 +100,21 @@ const Home = () => {
               <p>قم بالإشتراك بالباقة المميزة و أحصل علي</p>
 
               <ul>
-                <li><h6>شاشة تحكم</h6></li>
-                <li><h6><span>10</span> شاشة للطبيب</h6></li>
-                <li><h6><span>10</span> شاشة للإستقبال</h6></li>
-                <li><h6>شاشة للحجوزات</h6></li>
-                <li><h6>شاشة للمرضي</h6></li>
-                <li><h6>شاشة للمالية</h6></li>
-                <li><h6>شاشة للمخازن</h6></li>
+                <li className='yes'><CheckIcon /><h6>شاشة تحكم</h6></li>
+                <li className='yes'><CheckIcon /><h6><span>10</span> شاشة طبيب</h6></li>
+                <li className='yes'><CheckIcon /><h6><span>2</span> شاشة أدمن</h6></li>
+                <li className='yes'><CheckIcon /><h6><span>5</span> شاشة إستقبال</h6></li>
+                <li className='yes'><CheckIcon /><h6>شاشة للحجوزات</h6></li>
+                <li className='yes'><CheckIcon /><h6>شاشة للمرضي</h6></li>
+                <li className='yes'><CheckIcon /><h6>شاشة للمالية</h6></li>
+                <li className='yes'><CheckIcon /><h6>شاشة للمخازن</h6></li>
               </ul>
 
-              <Link to='/subscribe:vip' className='subscribe_btn'>إشتراك</Link>
+              <Link to='/subscribe/vip' className='subscribe_btn'>إشتراك</Link>
 
             </div>
           </div>
+          
           <div className="col-md-4 col-sm-6">
             <div className="qouta_item mediam">
               <h5>المتوسطة</h5>
@@ -115,16 +122,17 @@ const Home = () => {
               <p>قم بالإشتراك بالباقة المتوسطة و أحصل علي</p>
 
               <ul>
-                <li><h6>شاشة تحكم</h6></li>
-                <li><h6><span>5</span> شاشة للطبيب</h6></li>
-                <li><h6><span>5</span> شاشة للإستقبال</h6></li>
-                <li><h6>شاشة للحجوزات</h6></li>
-                <li><h6>شاشة للمرضي</h6></li>
-                <li><h6>شاشة للمالية</h6></li>
-                <li><h6>شاشة للمخازن</h6></li>
+                <li className='yes'><CheckIcon /><h6>شاشة تحكم</h6></li>
+                <li className='yes'><CheckIcon /><h6><span>5</span> شاشة طبيب</h6></li>
+                <li className='yes'><CheckIcon /><h6><span>1</span> شاشة أدمن</h6></li>
+                <li className='yes'><CheckIcon /><h6><span>2</span> شاشة إستقبال</h6></li>
+                <li className='yes'><CheckIcon /><h6>شاشة للحجوزات</h6></li>
+                <li className='yes'><CheckIcon /><h6>شاشة للمرضي</h6></li>
+                <li className='no'><CloseIcon /><h6>شاشة للمالية</h6></li>
+                <li className='no'><CloseIcon /><h6>شاشة للمخازن</h6></li>
               </ul>
 
-              <Link to='/subscribe:mediam' className='subscribe_btn'>إشتراك</Link>
+              <Link to='/subscribe/mediam' className='subscribe_btn'>إشتراك</Link>
 
             </div>
           </div>

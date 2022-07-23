@@ -1,9 +1,15 @@
 import React from 'react';
 import '../styles/patientCart.css';
+import { useParams } from 'react-router-dom';
 
 const PatientCart = () => {
+  const params = useParams();
+  const id = params.id
+
   return (
-    <div>PatientCart</div>
+    <div>
+      PatientCart {id}
+    </div>
   )
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import View from '../Routes/Routers';
 import '../styles/layout.css';
 import Footer from './Footer';
@@ -7,6 +7,12 @@ import SideNavbar from './SideNavbar';
 
 const Layout = () => {
   const [showSideNav, setShowSideNav] = useState(true);
+
+  useEffect(()=>{
+    if(window.innerWidth <= 666) {
+      setShowSideNav(false); 
+    };
+  },[])
 
   return (
     <>
