@@ -66,6 +66,44 @@ input[type=number] {
   text-align: right !important;
 }
 
+.search_total_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search_total_box input {
+  width: 50%;
+}
+
+.search_total_box span {
+  background-color: #2a9d8f;
+  padding: 6px 10px;
+  margin: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 400px) {
+  .search_total_box {
+      flex-direction: column;
+  }
+
+  .search_total_box input {
+      width: 100%;
+      order: 2;
+  }
+
+  .search_total_box span {
+      width: 100%;
+      text-align: center;
+      order: 1;
+      margin-bottom: 10px;
+  }
+}
+
 @media only screen and (max-width: 330px) {
   header .col-3:first-child {
     display: none;

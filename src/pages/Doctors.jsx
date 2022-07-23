@@ -4,9 +4,11 @@ import '../styles/doctors.css';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import VisibilityIcon from '@mui/icons-material/Visibility';
+import AirlineSeatReclineExtraOutlinedIcon from '@mui/icons-material/AirlineSeatReclineExtraOutlined';
 import { Link } from 'react-router-dom';
 
 const Doctors = () => {
+  const patientsNumber = 1;
 
   const handleDelete = (id) => {
     console.log(id);
@@ -20,6 +22,12 @@ const Doctors = () => {
           <div className="col-12">
             <div className="doctors_doctors_table">
               <h3 className='mb-3'>سجل الأطباء</h3>
+
+              <div className='search_total_box mt-4 mb-3'>
+                <input type="text" className='form-control' placeholder='البحث بالجوال' />
+                <span><AirlineSeatReclineExtraOutlinedIcon /> إجمالي المرضي: {patientsNumber} </span>
+              </div>
+
               <input type="text" className='form-control mt-4 mb-3 w-100' placeholder='البحث بكود الطبيب' />
               <div className="table-responsive">
                 <table className="table table-striped table-bordered table-hover lh-lg text-nowrap text-center">
@@ -42,7 +50,7 @@ const Doctors = () => {
                       <td className='d-flex justify-content-center align-items-center gap-2 flex-nowrap'>
                         <Link to='/doctors/view/5' className='btn btn-sm btn-success'><VisibilityIcon fontSize='0' /></Link>
                         <Link to='/doctors/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>
-                        <button onClick={()=>handleDelete(5)} className='btn btn-sm btn-danger'><DeleteIcon fontSize='0' /></button>
+                        <button onClick={() => handleDelete(5)} className='btn btn-sm btn-danger'><DeleteIcon fontSize='0' /></button>
                       </td>
                     </tr>
 

@@ -21,9 +21,9 @@ const Patients = () => {
         <div className="row">
           <div className="col-12"></div>
           <div className="patients_patients_table">
-            <h3 className='mb-3'>سجل المرضي</h3>
+            <h3>سجل المرضي</h3>
 
-            <div className='patients_patients_search-total mt-4 mb-3'>
+            <div className='search_total_box mt-4 mb-3'>
               <input type="text" className='form-control' placeholder='البحث بالجوال' />
               <span><AirlineSeatReclineExtraOutlinedIcon /> إجمالي المرضي: {patientsNumber} </span>
             </div>

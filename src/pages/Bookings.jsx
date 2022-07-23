@@ -5,10 +5,14 @@ import '../styles/bookings.css';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import BeenhereIcon from '@mui/icons-material/Beenhere';
+import AirlineSeatReclineExtraOutlinedIcon from '@mui/icons-material/AirlineSeatReclineExtraOutlined';
 import { Link } from 'react-router-dom';
 
 const Bookings = () => {
-  const {type} = useParams();
+  const { type } = useParams();
+  const patientsNowNumber = 1;
+  const patientsPastNumber = 1;
+  const patientsFutureNumber = 2;
 
   const [showNow, setShowNow] = useState(false);
   const [showPast, setShowPast] = useState(false);
@@ -41,8 +45,13 @@ const Bookings = () => {
           <div className="col-12">
 
             {showNow && <div className="doctors_doctors_table">
-              <h3 className='mb-3'>سجل الحجوزات الحالية</h3>
-              <input type="text" className='form-control mt-4 mb-3 w-100' placeholder='البحث بالجوال' />
+              <h3>سجل الحجوزات الحالية</h3>
+
+              <div className='search_total_box mt-4 mb-3'>
+                <input type="text" className='form-control' placeholder='البحث بالجوال' />
+                <span><AirlineSeatReclineExtraOutlinedIcon /> إجمالي المرضي: {patientsNowNumber} </span>
+              </div>
+
               <div className="table-responsive">
                 <table className="table table-striped table-bordered table-hover lh-lg text-nowrap text-center">
                   <thead>
@@ -75,8 +84,13 @@ const Bookings = () => {
             </div>}
 
             {showPast && <div className="doctors_doctors_table">
-              <h3 className='mb-3'>سجل الحجوزات السابقة</h3>
-              <input type="text" className='form-control mt-4 mb-3 w-100' placeholder='البحث بالجوال' />
+              <h3>سجل الحجوزات السابقة</h3>
+
+              <div className='search_total_box mt-4 mb-3'>
+                <input type="text" className='form-control' placeholder='البحث بالجوال' />
+                <span><AirlineSeatReclineExtraOutlinedIcon /> إجمالي المرضي: {patientsPastNumber} </span>
+              </div>
+
               <div className="table-responsive">
                 <table className="table table-striped table-bordered table-hover lh-lg text-nowrap text-center">
                   <thead>
@@ -109,8 +123,13 @@ const Bookings = () => {
             </div>}
 
             {showFuture && <div className="doctors_doctors_table">
-              <h3 className='mb-3'>سجل الحجوزات القادمة</h3>
-              <input type="text" className='form-control mt-4 mb-3 w-100' placeholder='البحث بالجوال' />
+              <h3>سجل الحجوزات القادمة</h3>
+              
+              <div className='search_total_box mt-4 mb-3'>
+                <input type="text" className='form-control' placeholder='البحث بالجوال' />
+                <span><AirlineSeatReclineExtraOutlinedIcon /> إجمالي المرضي: {patientsFutureNumber} </span>
+              </div>
+
               <div className="table-responsive">
                 <table className="table table-striped table-bordered table-hover lh-lg text-nowrap text-center">
                   <thead>
@@ -128,6 +147,19 @@ const Bookings = () => {
                     <tr>
                       <th>1</th>
                       <td>محمد علي</td>
+                      <td>01000000025</td>
+                      <td>تنظيف اسنان</td>
+                      <td>30</td>
+                      <td className='d-flex justify-content-center align-items-center gap-2 flex-nowrap'>
+                        <Link to='/doctors/view/5' className='btn btn-sm btn-success'><BeenhereIcon fontSize='0' /></Link>
+                        <Link to='/doctors/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>
+                        <button onClick={() => handleDelete(5)} className='btn btn-sm btn-danger'><DeleteIcon fontSize='0' /></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>2</th>
+                      <td>علي محمد</td>
                       <td>01000000025</td>
                       <td>تنظيف اسنان</td>
                       <td>30</td>
