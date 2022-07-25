@@ -9,7 +9,6 @@ const App = () => {
   const [loginComponent, setLoginComponent] = useState(false);
   const [registerComponent, setRegisterComponent] = useState(false);
   const [layoutComponent, setLayoutComponent] = useState(false);
-  // console.log(pathNameURL);
 
   useEffect(() => {
     if (pathNameURL === "/login") {

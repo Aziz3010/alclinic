@@ -1,0 +1,59 @@
+.visita_top_details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.visita_top_details h4 {
+    background-color: #2a9d8f;
+    padding: 6px 10px;
+    margin: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.visita_patient_details h5 {
+    margin-bottom: 15px;
+}
+
+.visita_patient_details ul {
+    padding: 0;
+}
+
+.visita_patient_details ul li {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px dashed #bdbcbc;
+    padding: 10px 0;
+}
+
+.visita_patient_details ul li h6 {
+    margin: 0;
+    width: 110px;
+}
+
+.visita_patient_details ul li span {
+    color: #2a9d8f;
+    font-weight: 600;
+}
+
+
+
+
+
+.visita_doctor_notes h5 {
+    margin-bottom: 15px;
+}
+
+.visita_doctor_notes form textarea {
+    width: 100%;
+    resize: none;
+    outline: none;
+    border: 4px double #bdbcbc;
+    direction: ltr;
+    height: 300px;
+}
+

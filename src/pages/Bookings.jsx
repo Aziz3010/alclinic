@@ -71,9 +71,9 @@ const Bookings = () => {
                       <td>محمد علي</td>
                       <td>01000000025</td>
                       <td>تنظيف اسنان</td>
-                      <td>30</td>
+                      <td>31</td>
                       <td className='d-flex justify-content-center align-items-center gap-2 flex-nowrap'>
-                        <Link to='/doctors/view/5' className='btn btn-sm btn-success'><BeenhereIcon fontSize='0' /></Link>
+                        <Link to='/doctors/visita/4' className='btn btn-sm btn-success'><BeenhereIcon fontSize='0' /></Link>
                         <Link to='/doctors/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>
                         <button onClick={() => handleDelete(5)} className='btn btn-sm btn-danger'><DeleteIcon fontSize='0' /></button>
                       </td>

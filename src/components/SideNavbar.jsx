@@ -75,7 +75,11 @@ const SideNavbar = ({ showSideNav, setShowSideNav }) => {
           </div>
         </li>
         <ul className='drop_down'>
-          <li><Link to='/bookings/now'>الحجوزات الحالية</Link></li>
+          <li><Link to='/doctor/bookings'>الحجوزات الحالية</Link></li>
+
+
+
+          {/* <li><Link to='/bookings/now'>الحجوزات الحالية</Link></li> */}
           <li><Link to='/doctors'>الأطباء</Link></li>
         </ul>
 

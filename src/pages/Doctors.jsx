@@ -4,7 +4,7 @@ import '../styles/doctors.css';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import AirlineSeatReclineExtraOutlinedIcon from '@mui/icons-material/AirlineSeatReclineExtraOutlined';
+import BoyIcon from '@mui/icons-material/Boy';
 import { Link } from 'react-router-dom';
 
 const Doctors = () => {
@@ -24,11 +24,10 @@ const Doctors = () => {
               <h3 className='mb-3'>سجل الأطباء</h3>
 
               <div className='search_total_box mt-4 mb-3'>
-                <input type="text" className='form-control' placeholder='البحث بالجوال' />
-                <span><AirlineSeatReclineExtraOutlinedIcon /> إجمالي المرضي: {patientsNumber} </span>
+                <input type="text" className='form-control' placeholder='البحث بكود الطبيب' />
+                <span><BoyIcon /> إجمالي الأطباء: {patientsNumber} </span>
               </div>
 
-              <input type="text" className='form-control mt-4 mb-3 w-100' placeholder='البحث بكود الطبيب' />
               <div className="table-responsive">
                 <table className="table table-striped table-bordered table-hover lh-lg text-nowrap text-center">
                   <thead>

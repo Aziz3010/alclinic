@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Bookings from '../pages/Bookings';
 import Doctor from '../pages/Doctor';
+import DoctorBookings from '../pages/DoctorBookings';
 import Doctors from '../pages/Doctors';
 import Financial from '../pages/Financial';
 import Home from '../pages/Home';
@@ -13,6 +14,7 @@ import Receptionist from '../pages/Receptionist';
 import Receptionists from '../pages/Receptionists';
 import Store from '../pages/Store';
 import Subscribe from '../pages/Subscribe';
+import Visita from '../pages/Visita';
 
 const Routers = () => {
   return <Routes>
@@ -21,6 +23,8 @@ const Routers = () => {
     <Route path='/subscribe/:qouta' element={ <Subscribe /> } />
     
     <Route path='/doctors' element={ <Doctors /> } />
+    <Route path='/doctors/visita/:patientID' element={ <Visita /> } />
+    <Route path='/doctor/bookings' element={ <DoctorBookings /> } />
     <Route path='/doctors/view/:id' element={ <Doctor /> } />
     <Route path='/doctors/edit/:id' element={ <Doctor /> } />
 
