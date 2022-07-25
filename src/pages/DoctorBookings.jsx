@@ -36,6 +36,7 @@ const DoctorBookings = () => {
                                         <th scope="col">الجوال</th>
                                         <th scope="col">سبب الزيارة</th>
                                         <th scope="col">السن</th>
+                                        <th scope="col">الكود</th>
                                         <th scope="col">التحكم</th>
                                     </tr>
                                 </thead>
@@ -47,6 +48,7 @@ const DoctorBookings = () => {
                                         <td>01000000025</td>
                                         <td>تنظيف اسنان</td>
                                         <td>31</td>
+                                        <td>4</td>
                                         <td className='d-flex justify-content-center align-items-center gap-2 flex-nowrap'>
                                             <Link to='/doctors/visita/4' className='btn btn-sm btn-success'><AssignmentTurnedInIcon fontSize='0' /></Link>
                                             <Link to='/doctors/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>

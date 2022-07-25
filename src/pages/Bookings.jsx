@@ -61,6 +61,7 @@ const Bookings = () => {
                       <th scope="col">الجوال</th>
                       <th scope="col">سبب الزيارة</th>
                       <th scope="col">السن</th>
+                      <th scope="col">الكود</th>
                       <th scope="col">التحكم</th>
                     </tr>
                   </thead>
@@ -72,6 +73,7 @@ const Bookings = () => {
                       <td>01000000025</td>
                       <td>تنظيف اسنان</td>
                       <td>31</td>
+                      <td>10025</td>
                       <td className='d-flex justify-content-center align-items-center gap-2 flex-nowrap'>
                         <Link to='/doctors/visita/4' className='btn btn-sm btn-success'><BeenhereIcon fontSize='0' /></Link>
                         <Link to='/doctors/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>
@@ -100,6 +102,7 @@ const Bookings = () => {
                       <th scope="col">الجوال</th>
                       <th scope="col">سبب الزيارة</th>
                       <th scope="col">السن</th>
+                      <th scope="col">الكود</th>
                       <th scope="col">التحكم</th>
                     </tr>
                   </thead>
@@ -111,6 +114,7 @@ const Bookings = () => {
                       <td>01000000025</td>
                       <td>تنظيف اسنان</td>
                       <td>30</td>
+                      <td>125</td>
                       <td className='d-flex justify-content-center align-items-center gap-2 flex-nowrap'>
                         <Link to='/doctors/view/5' className='btn btn-sm btn-success'><BeenhereIcon fontSize='0' /></Link>
                         <Link to='/doctors/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>
@@ -124,7 +128,7 @@ const Bookings = () => {
 
             {showFuture && <div className="doctors_doctors_table">
               <h3>سجل الحجوزات القادمة</h3>
-              
+
               <div className='search_total_box mt-4 mb-3'>
                 <input type="text" className='form-control' placeholder='البحث بالجوال' />
                 <span><AirlineSeatReclineExtraOutlinedIcon /> إجمالي المرضي: {patientsFutureNumber} </span>
@@ -139,6 +143,7 @@ const Bookings = () => {
                       <th scope="col">الجوال</th>
                       <th scope="col">سبب الزيارة</th>
                       <th scope="col">السن</th>
+                      <th scope="col">الكود</th>
                       <th scope="col">التحكم</th>
                     </tr>
                   </thead>
@@ -150,6 +155,7 @@ const Bookings = () => {
                       <td>01000000025</td>
                       <td>تنظيف اسنان</td>
                       <td>30</td>
+                      <td>100025</td>
                       <td className='d-flex justify-content-center align-items-center gap-2 flex-nowrap'>
                         <Link to='/doctors/view/5' className='btn btn-sm btn-success'><BeenhereIcon fontSize='0' /></Link>
                         <Link to='/doctors/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>
@@ -163,6 +169,7 @@ const Bookings = () => {
                       <td>01000000025</td>
                       <td>تنظيف اسنان</td>
                       <td>30</td>
+                      <td>155</td>
                       <td className='d-flex justify-content-center align-items-center gap-2 flex-nowrap'>
                         <Link to='/doctors/view/5' className='btn btn-sm btn-success'><BeenhereIcon fontSize='0' /></Link>
                         <Link to='/doctors/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>

@@ -3,6 +3,7 @@ import Helmet from '../components/Helmet';
 import '../styles/patients.css';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import BeenhereIcon from '@mui/icons-material/Beenhere';
 import AirlineSeatReclineExtraOutlinedIcon from '@mui/icons-material/AirlineSeatReclineExtraOutlined';
 import { Link } from 'react-router-dom';
@@ -10,6 +11,10 @@ import { Link } from 'react-router-dom';
 const Patients = () => {
 
   const patientsNumber = 1;
+
+  const addToCurrentPatient = (id) => {
+    console.log(id);
+  }
 
   const handleDelete = (id) => {
     console.log(id);
@@ -37,6 +42,7 @@ const Patients = () => {
                     <th scope="col">الجوال</th>
                     <th scope="col">سبب الزيارة</th>
                     <th scope="col">السن</th>
+                    <th scope="col">الكود</th>
                     <th scope="col">التحكم</th>
                   </tr>
                 </thead>
@@ -48,8 +54,10 @@ const Patients = () => {
                     <td>01000000025</td>
                     <td>تنظيف اسنان</td>
                     <td>30</td>
+                    <td>452</td>
                     <td className='d-flex justify-content-center align-items-center gap-2 flex-nowrap'>
-                      <Link to='/doctors/view/5' className='btn btn-sm btn-success'><BeenhereIcon fontSize='0' /></Link>
+                      <button onClick={() => addToCurrentPatient(5)} className='btn btn-sm btn-primary'><BeenhereIcon fontSize='0' /></button>
+                      <Link to='/doctors/view/5' className='btn btn-sm btn-success'><VisibilityIcon fontSize='0' /></Link>
                       <Link to='/doctors/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>
                       <button onClick={() => handleDelete(5)} className='btn btn-sm btn-danger'><DeleteIcon fontSize='0' /></button>
                     </td>

@@ -5,6 +5,16 @@ import { useParams } from 'react-router-dom';
 const Visita = () => {
     const { patientID } = useParams();
 
+    const handleSaveAndPrint = (e) => {
+        e.preventDefault();
+        console.log("Print");
+        // const body = document.querySelector("body");
+        // const visitaText = document.querySelector(".visita_doctor_notes textarea").value;
+        // body.innerHTML = visitaText;
+        // window.print();
+        // body.innerHTML = body;
+    }
+
     return (
         <div className="container">
 
@@ -53,7 +63,7 @@ const Visita = () => {
                         <h5>الروشتة</h5>
                         <form>
                             <textarea></textarea>
-                            <button className='btn btn-primary mt-3'>حفظ و طباعة الروشتة</button>
+                            <button onClick={(e)=>handleSaveAndPrint(e)} className='btn btn-primary mt-3'>حفظ و طباعة الروشتة</button>
                         </form>
                     </div>
                 </div>
