@@ -57,13 +57,17 @@ const Visita = () => {
                 </div>
             </div>
 
-            <div className="row mt-4">
+            <div className="row mt-4 mb-4">
                 <div className="col-12">
                     <div className="visita_doctor_notes">
                         <h5>الروشتة</h5>
                         <form>
                             <textarea></textarea>
-                            <button onClick={(e)=>handleSaveAndPrint(e)} className='btn btn-primary mt-3'>حفظ و طباعة الروشتة</button>
+                            <div className="mt-4 mb-4">
+                                <label htmlFor="patient_scan"><h5 className='m-0'>إرفاق الأشعة</h5></label>
+                                <input className="form-control mt-2" type="file" id="patient_scan" />
+                            </div>
+                            <button onClick={(e) => handleSaveAndPrint(e)} className='btn btn-primary mt-3'>حفظ و طباعة الروشتة</button>
                         </form>
                     </div>
                 </div>
