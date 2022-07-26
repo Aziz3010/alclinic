@@ -18,7 +18,6 @@ const Doctors = () => {
   async function getAllDoctorsFromAPI() {
     let { data } = await Axios.get("http://localhost/alclinic/getAllUsers.php");
     setDoctors(data);
-    console.log("done");
   }
 
   const handleDelete = (id) => {
@@ -53,8 +52,7 @@ const Doctors = () => {
                   </thead>
                   <tbody>
 
-                    {
-                      doctors.map((doctor, index) => (
+                    { doctors.length > 0 ? doctors.map((doctor, index) => (
                         <tr key={index}>
                           <td className='table_td_image'><img className='table_images' src={`http://localhost/alclinic/uploads/${doctor.image}`} alt={doctor.first_name} /></td>
                           <th>{doctor.first_name} {doctor.last_name}</th>
@@ -68,8 +66,9 @@ const Doctors = () => {
                           </td>
                         </tr>
                       ))
+                    :
+                      <tr className='text-center'><td colSpan='6'>No doctors in Database</td></tr>
                     }
-
                   </tbody>
                 </table>
               </div>
