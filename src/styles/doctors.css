@@ -1,0 +1,10 @@
+table tr {
+    height: 30px !important;
+    line-height: 30px;
+}
+
+table tr .table_td_image .table_images {
+    height: 30px;
+    object-fit: cover;
+    border-radius: 5px;
+}
