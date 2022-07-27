@@ -14,6 +14,12 @@ const Bookings = () => {
   const patientsPastNumber = 1;
   const patientsFutureNumber = 2;
 
+  // call api and select all bookings
+  // get the today data
+  // when showNow is true filter bookings to today bookings only
+  // when showPast is true filter bookings to past bookings only
+  // when showFuture is true filter bookings to future bookings only
+
   const [showNow, setShowNow] = useState(false);
   const [showPast, setShowPast] = useState(false);
   const [showFuture, setShowFuture] = useState(false);
@@ -38,6 +44,10 @@ const Bookings = () => {
     console.log(id);
   }
 
+  const handleBookNow = (id) => {
+    console.log(id);
+  }
+
   return (
     <Helmet title='الحجوزات'>
       <div className="container">
@@ -48,7 +58,7 @@ const Bookings = () => {
               <h3>سجل الحجوزات الحالية</h3>
 
               <div className='search_total_box mt-4 mb-3'>
-                <input type="text" className='form-control' placeholder='البحث بالجوال' />
+                <input type="text" className='form-control' placeholder='البحث بالهاتف' />
                 <span><AirlineSeatReclineExtraOutlinedIcon /> إجمالي المرضي: {patientsNowNumber} </span>
               </div>
 
@@ -58,7 +68,7 @@ const Bookings = () => {
                     <tr>
                       <th scope="col">التسلسل</th>
                       <th scope="col">الاسم</th>
-                      <th scope="col">الجوال</th>
+                      <th scope="col">الهاتف</th>
                       <th scope="col">سبب الزيارة</th>
                       <th scope="col">السن</th>
                       <th scope="col">الكود</th>
@@ -75,8 +85,8 @@ const Bookings = () => {
                       <td>31</td>
                       <td>10025</td>
                       <td className='d-flex justify-content-center align-items-center gap-2 flex-nowrap'>
-                        <Link to='/doctors/visita/4' className='btn btn-sm btn-success'><BeenhereIcon fontSize='0' /></Link>
-                        <Link to='/doctors/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>
+                        <button onClick={() => handleBookNow(5)} className='btn btn-sm btn-success'><BeenhereIcon fontSize='0' /></button>
+                        <Link to='/patients/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>
                         <button onClick={() => handleDelete(5)} className='btn btn-sm btn-danger'><DeleteIcon fontSize='0' /></button>
                       </td>
                     </tr>
@@ -89,7 +99,7 @@ const Bookings = () => {
               <h3>سجل الحجوزات السابقة</h3>
 
               <div className='search_total_box mt-4 mb-3'>
-                <input type="text" className='form-control' placeholder='البحث بالجوال' />
+                <input type="text" className='form-control' placeholder='البحث بالهاتف' />
                 <span><AirlineSeatReclineExtraOutlinedIcon /> إجمالي المرضي: {patientsPastNumber} </span>
               </div>
 
@@ -99,7 +109,7 @@ const Bookings = () => {
                     <tr>
                       <th scope="col">التسلسل</th>
                       <th scope="col">الاسم</th>
-                      <th scope="col">الجوال</th>
+                      <th scope="col">الهاتف</th>
                       <th scope="col">سبب الزيارة</th>
                       <th scope="col">السن</th>
                       <th scope="col">الكود</th>
@@ -116,8 +126,8 @@ const Bookings = () => {
                       <td>30</td>
                       <td>125</td>
                       <td className='d-flex justify-content-center align-items-center gap-2 flex-nowrap'>
-                        <Link to='/doctors/view/5' className='btn btn-sm btn-success'><BeenhereIcon fontSize='0' /></Link>
-                        <Link to='/doctors/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>
+                        <button onClick={() => handleBookNow(5)} className='btn btn-sm btn-success'><BeenhereIcon fontSize='0' /></button>
+                        <Link to='/patients/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>
                         <button onClick={() => handleDelete(5)} className='btn btn-sm btn-danger'><DeleteIcon fontSize='0' /></button>
                       </td>
                     </tr>
@@ -130,7 +140,7 @@ const Bookings = () => {
               <h3>سجل الحجوزات القادمة</h3>
 
               <div className='search_total_box mt-4 mb-3'>
-                <input type="text" className='form-control' placeholder='البحث بالجوال' />
+                <input type="text" className='form-control' placeholder='البحث بالهاتف' />
                 <span><AirlineSeatReclineExtraOutlinedIcon /> إجمالي المرضي: {patientsFutureNumber} </span>
               </div>
 
@@ -140,7 +150,7 @@ const Bookings = () => {
                     <tr>
                       <th scope="col">التسلسل</th>
                       <th scope="col">الاسم</th>
-                      <th scope="col">الجوال</th>
+                      <th scope="col">الهاتف</th>
                       <th scope="col">سبب الزيارة</th>
                       <th scope="col">السن</th>
                       <th scope="col">الكود</th>
@@ -157,8 +167,8 @@ const Bookings = () => {
                       <td>30</td>
                       <td>100025</td>
                       <td className='d-flex justify-content-center align-items-center gap-2 flex-nowrap'>
-                        <Link to='/doctors/view/5' className='btn btn-sm btn-success'><BeenhereIcon fontSize='0' /></Link>
-                        <Link to='/doctors/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>
+                        <button onClick={() => handleBookNow(5)} className='btn btn-sm btn-success'><BeenhereIcon fontSize='0' /></button>
+                        <Link to='/patients/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>
                         <button onClick={() => handleDelete(5)} className='btn btn-sm btn-danger'><DeleteIcon fontSize='0' /></button>
                       </td>
                     </tr>
@@ -171,8 +181,8 @@ const Bookings = () => {
                       <td>30</td>
                       <td>155</td>
                       <td className='d-flex justify-content-center align-items-center gap-2 flex-nowrap'>
-                        <Link to='/doctors/view/5' className='btn btn-sm btn-success'><BeenhereIcon fontSize='0' /></Link>
-                        <Link to='/doctors/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>
+                        <button onClick={() => handleBookNow(5)} className='btn btn-sm btn-success'><BeenhereIcon fontSize='0' /></button>
+                        <Link to='/patients/edit/5' className='btn btn-sm btn-warning'><EditIcon fontSize='0' /></Link>
                         <button onClick={() => handleDelete(5)} className='btn btn-sm btn-danger'><DeleteIcon fontSize='0' /></button>
                       </td>
                     </tr>

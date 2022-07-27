@@ -10,6 +10,8 @@ import Helmet from '../components/Helmet';
 const DoctorBookings = () => {
     const patientsNowNumber = 1;
 
+    // call api to get all today booking for the doctor 
+
     const handleDelete = (id) => {
         console.log(id);
     }
@@ -23,7 +25,7 @@ const DoctorBookings = () => {
                         <h3>سجل الحجوزات الحالية</h3>
 
                         <div className='search_total_box mt-4 mb-3'>
-                            <input type="text" className='form-control' placeholder='البحث بالجوال' />
+                            <input type="text" className='form-control' placeholder='البحث بالهاتف' />
                             <span><AirlineSeatReclineExtraOutlinedIcon /> إجمالي المرضي: {patientsNowNumber} </span>
                         </div>
 
@@ -33,7 +35,7 @@ const DoctorBookings = () => {
                                     <tr>
                                         <th scope="col">التسلسل</th>
                                         <th scope="col">الاسم</th>
-                                        <th scope="col">الجوال</th>
+                                        <th scope="col">الهاتف</th>
                                         <th scope="col">سبب الزيارة</th>
                                         <th scope="col">السن</th>
                                         <th scope="col">الكود</th>

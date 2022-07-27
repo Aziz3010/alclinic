@@ -8,6 +8,7 @@ const Login = ({ setRegisterComponent }) => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [remember, setRemember] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,13 +18,22 @@ const Login = ({ setRegisterComponent }) => {
       "password": password,
     };
     console.log(inputsData);
-    
     // sendDataToAPI(inputsData);
+
+    // If checkBox is checked
+    if (remember) {
+      // here save data in localStorage and get it when open component again ------ put it in inputs value
+      console.log('Remember me');
+    } else {
+      // here remove data from localStorage
+      console.log('Not remember me');
+    }
 
     const token = "asdsadqwdeqwdaxc";
     localStorage.setItem("userTokenLocalStorage", JSON.stringify(token))
     console.log("Send token to LS");
-    window.location.replace('/home');
+    // window.location.replace('/home');
+    window.location.replace('/receptionists');
   }
 
   // call api
@@ -40,17 +50,16 @@ const Login = ({ setRegisterComponent }) => {
           <div className="col-12">
             <div className='title_form_login'>
               <h2 className='text-center mb-4'>تسجيل الدخول</h2>
-
               <form onSubmit={handleSubmit} className='form_login'>
-                <input name='email' onChange={(e)=>setEmail(e.target.value)} type="email" className="form-control mb-3" placeholder='البريد الإلكتروني' />
-                <input name='password' onChange={(e)=>setPassword(e.target.value)} type="password" className="form-control mb-3" placeholder='كلمة المرور' />
+                <input name='email' onChange={(e) => setEmail(e.target.value)} type="email" className="form-control mb-3" placeholder='البريد الإلكتروني' />
+                <input name='password' onChange={(e) => setPassword(e.target.value)} type="password" className="form-control mb-3" placeholder='كلمة المرور' />
                 <div className="input-group mb-4">
                   <div className="input-group-text w-100">
-                    <input className="form-check-input mt-0" id='remember' type="checkbox" />
+                    <input onChange={(e) => setRemember(true)} className="form-check-input mt-0" id='remember' type="checkbox" />
                     <label htmlFor="remember" className='m-0 me-2 w-100'>تذكرني</label>
                   </div>
                 </div>
-                <button type='submit' className='btn btn-primary'>تسجيل الدخول</button>
+                <button className='btn btn-primary'>تسجيل الدخول</button>
                 <p className='m-0 mt-4'>لا يوجد لديك حساب؟
                   <Link onClick={() => setRegisterComponent(true)} to="/register"> إشترك الأن</Link>
                 </p>

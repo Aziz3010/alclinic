@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from '../components/Helmet';
 import '../styles/doctors.css';
+import Loader from '../components/Loader';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import VisibilityIcon from '@mui/icons-material/Visibility';
@@ -10,18 +11,41 @@ import Axios from 'axios';
 
 const Doctors = () => {
   const [doctors, setDoctors] = useState([]);
+  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
+    setLoader(true);
     getAllDoctorsFromAPI();
-  },[])
+  }, [])
 
-  async function getAllDoctorsFromAPI() {
-    let { data } = await Axios.get("http://localhost/alclinic/getAllUsers.php");
-    setDoctors(data);
+  async function getAllDoctorsFromAPI(searchTirm = null) {
+    let {data} = await Axios.get("http://localhost/alclinic/getAllUsers.php");
+    // search
+    if (searchTirm !== null) {
+      const doctorsAfterFilter = data.filter(doctor => doctor.first_name.includes(searchTirm));
+      if (doctorsAfterFilter !== []) {
+        setDoctors(doctorsAfterFilter);
+      } else {
+        const doctorsAfterFilter = data.filter(doctor => doctor);
+        setDoctors(doctorsAfterFilter);
+      }
+    } else {
+      setDoctors(data);
+    }
+    // loader
+    if(data.length > 0) {
+      setLoader(false);
+    }
+    else {
+      setLoader(true);
+    }
   }
 
   const handleDelete = (id) => {
     console.log(id);
+    // call api to delete row by id
+    // delete * from `users` where id = 5id
+    // return msg [user deleted]
   }
 
   return (
@@ -34,25 +58,25 @@ const Doctors = () => {
               <h3 className='mb-3'>سجل الأطباء</h3>
 
               <div className='search_total_box mt-4 mb-3'>
-                <input type="text" className='form-control' placeholder='البحث بكود الطبيب' />
+                <input onChange={(e) => getAllDoctorsFromAPI(e.target.value)} type="text" className='form-control' placeholder='البحث بإسم الطبيب' />
                 <span><BoyIcon /> إجمالي الأطباء: {doctors.length} </span>
               </div>
 
-              <div className="table-responsive">
-                <table className="table table-striped table-bordered table-hover text-nowrap text-center">
-                  <thead>
-                    <tr>
-                      <th scope="col">صورة</th>
-                      <th scope="col">الإسم</th>
-                      <th scope="col">هاتف</th>
-                      <th scope="col">عمر</th>
-                      <th scope="col">كود</th>
-                      <th scope="col">التحكم</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-
-                    { doctors.length > 0 ? doctors.map((doctor, index) => (
+              { loader === false ?   
+                <div className="table-responsive">
+                  <table className="table table-striped table-bordered table-hover text-nowrap text-center">
+                    <thead>
+                      <tr>
+                        <th scope="col">صورة</th>
+                        <th scope="col">الإسم</th>
+                        <th scope="col">هاتف</th>
+                        <th scope="col">عمر</th>
+                        <th scope="col">كود</th>
+                        <th scope="col">التحكم</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {doctors.length > 0 ? doctors.map((doctor, index) => (
                         <tr key={index}>
                           <td className='table_td_image'><img className='table_images' src={`http://localhost/alclinic/uploads/${doctor.image}`} alt={doctor.first_name} /></td>
                           <th>{doctor.first_name} {doctor.last_name}</th>
@@ -66,15 +90,18 @@ const Doctors = () => {
                           </td>
                         </tr>
                       ))
-                    :
-                      <tr className='text-center'><td colSpan='6'>No doctors in Database</td></tr>
-                    }
-                  </tbody>
-                </table>
-              </div>
+                        :
+                        <tr className='text-center'><td colSpan='6'>No doctors in Database</td></tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+              : 
+                <Loader />
+              }
+
             </div>
           </div>
-
         </div>
       </div>
     </Helmet>

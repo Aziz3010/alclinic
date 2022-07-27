@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import alclinic from '../assets/imgs/logo.ico';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import LockIcon from '@mui/icons-material/Lock';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import AirlineSeatReclineExtraOutlinedIcon from '@mui/icons-material/AirlineSeatReclineExtraOutlined';
 import BoyIcon from '@mui/icons-material/Boy';
-import StorageIcon from '@mui/icons-material/Storage';
 import GirlIcon from '@mui/icons-material/Girl';
 import CloseIcon from '@mui/icons-material/Close';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+// import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+// import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+// import StorageIcon from '@mui/icons-material/Storage';
 import '../styles/sideNavbar.css';
 
 const SideNavbar = ({ showSideNav, setShowSideNav }) => {
@@ -59,12 +59,12 @@ const SideNavbar = ({ showSideNav, setShowSideNav }) => {
       <ul className='sideNavbar_ul'>
 
         {/* الصفحة الرئيسية */}
-        <li>
+        {/* <li>
           <Link to='/home'>
             <HomeOutlinedIcon />
             <p>الصفحة الرئيسية</p>
           </Link>
-        </li>
+        </li> */}
 
         {/* الأطباء */}
         <li className='drop'>
@@ -76,7 +76,7 @@ const SideNavbar = ({ showSideNav, setShowSideNav }) => {
         </li>
         <ul className='drop_down'>
           <li><Link to='/doctor/bookings'>الحجوزات الحالية</Link></li>
-          <li><Link to='/doctors'>الأطباء</Link></li>
+          {/* <li><Link to='/doctors'>الأطباء</Link></li> */}
         </ul>
 
         {/* الإستقبال */}
@@ -89,7 +89,7 @@ const SideNavbar = ({ showSideNav, setShowSideNav }) => {
         </li>
         <ul className='drop_down'>
           <li><Link to='/receptionists'>الإستقبال</Link></li>
-          <li><Link to='/receptionists/44'>الموظفين</Link></li>
+          {/* <li><Link to='/receptionists/44'>الموظفين</Link></li> */}
         </ul>
 
         {/* الحجوزات */}
@@ -115,7 +115,7 @@ const SideNavbar = ({ showSideNav, setShowSideNav }) => {
         </li>
 
         {/* المخزن */}
-        <li className='drop'>
+        {/* <li className='drop'>
           <StorageIcon />
           <div onClick={(e) => handleDropDown(e)} className='drop_text_arrow'>
             <p>المخزن</p>
@@ -125,10 +125,10 @@ const SideNavbar = ({ showSideNav, setShowSideNav }) => {
         <ul className='drop_down'>
           <li><Link to='/store'>أدوات طبية</Link></li>
           <li><Link to='/store'>أخري</Link></li>
-        </ul>
+        </ul> */}
 
         {/* المالية */}
-        <li className='drop'>
+        {/* <li className='drop'>
           <AttachMoneyIcon />
           <div onClick={(e) => handleDropDown(e)} className='drop_text_arrow'>
             <p>المالية</p>
@@ -139,7 +139,7 @@ const SideNavbar = ({ showSideNav, setShowSideNav }) => {
           <li><Link to='/financial'>الإيرادات</Link></li>
           <li><Link to='/financial'>المصروفات</Link></li>
           <li><Link to='/financial'>التقارير المالية</Link></li>
-        </ul>
+        </ul> */}
 
         {/* تسجيل الخروج */}
         <li>

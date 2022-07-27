@@ -8,7 +8,7 @@ const PatientCart = () => {
 
   return (
     <div>
-      PatientCart {id}
+      PatientCart id: {id}
     </div>
   )
 }

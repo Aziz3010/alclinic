@@ -1,5 +1,8 @@
 .receptionists_item {
-    background-color: #2a9d8f;
+    /* background-color: #2a9d8f; */
+    background-color: #0e728b;
+    color: #fff;
+
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
@@ -10,5 +13,6 @@
 
 .receptionists_item:hover {
     transform: translateY(3px);
-    background-color: #2a9d90c4;
+    /* background-color: #2a9d90c4; */
+    background-color: #138aa8;
 }
